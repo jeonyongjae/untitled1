@@ -1,9 +1,10 @@
+# https://github.com/jeonyongjae/LG-Academy.git
 from google.colab import drive
 drive.mount('/content/drive')
 
 import requests
 
-url = 'https://github.com/policyoptimizer/241022_malfunction_prediction/raw/main/24%EB%85%84_AI_Code(%EC%8B%A4%EC%8A%B5%EC%BD%94%EB%93%9C)_2%EC%B0%A8%EC%88%98.zip'
+url = 'https://github.com/jeonyongjae/LG-Academy.git/24%EB%85%84_AI_Code(%EC%8B%A4%EC%8A%B5%EC%BD%94%EB%93%9C)_2%EC%B0%A8%EC%88%98.zip'
 save_path = '/content/drive/MyDrive/AI_Code_Quiz1.zip'
 
 response = requests.get(url)
