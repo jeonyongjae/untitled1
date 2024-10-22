@@ -14,7 +14,7 @@ print(f"저장!!: {save_path}")
 
 import zipfile
 
-unzip_folder_path = '/content/drive/MyDrive/24년_AI_Code_2차수/'
+unzip_folder_path = '/content/drive/MyDrive/AI_Code'
 with zipfile.ZipFile(save_path, 'r') as zip_ref:
     zip_ref.extractall(unzip_folder_path)
 
