@@ -13,10 +13,10 @@ with open(save_path, 'wb') as f:
 
 print(f"저장!!: {save_path}")
 
-# import zipfile
+import zipfile
 
-# unzip_folder_path = '/content/drive/MyDrive/AI_Code'
-# with zipfile.ZipFile(save_path, 'r') as zip_ref:
-#     zip_ref.extractall(unzip_folder_path)
+unzip_folder_path = '/content/drive/MyDrive/AI_Code'
+with zipfile.ZipFile(save_path, 'r') as zip_ref:
+    zip_ref.extractall(unzip_folder_path)
 
-# print(f"압축 해제: {unzip_folder_path}")
+print(f"압축 해제: {unzip_folder_path}")
