@@ -1,22 +1,15 @@
-# https://github.com/jeonyongjae/LG-Academy.git
 from google.colab import drive
+import zipfile
 drive.mount('/content/drive')
 
-import requests
+!wget https://github.com/jeonyongjae/LG-Academy/raw/main/Quiz_1.zip -O /content/drive/MyDrive/Quiz_1.zip
 
-url = 'https://github.com/jeonyongjae/LG-Academy.git/Quiz 1.ipynb'
-save_path = '/content/drive/MyDrive/Quiz 1.ipynb'
+# 압축 풀고자 하는 zip 파일 경로
+zip_file_path = '/content/drive/MyDrive/Quiz_1.zip'
 
-response = requests.get(url)
-with open(save_path, 'wb') as f:
-    f.write(response.content)
+# 압축을 풀 폴더 경로
+extract_path = '/content/drive/MyDrive/'
 
-print(f"저장!!: {save_path}")
-
-import zipfile
-
-unzip_folder_path = '/content/drive/MyDrive/AI_Code'
-with zipfile.ZipFile(save_path, 'r') as zip_ref:
-    zip_ref.extractall(unzip_folder_path)
-
-print(f"압축 해제: {unzip_folder_path}")
+# 압축 풀기
+with zipfile.ZipFile(zip_file_path, 'r') as zip_ref:
+    zip_ref.extractall(extract_path)
