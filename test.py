@@ -4,7 +4,7 @@ drive.mount('/content/drive')
 import requests
 
 url = 'https://github.com/policyoptimizer/241022_malfunction_prediction/raw/main/24%EB%85%84_AI_Code(%EC%8B%A4%EC%8A%B5%EC%BD%94%EB%93%9C)_2%EC%B0%A8%EC%88%98.zip'
-save_path = '/content/drive/MyDrive/24년_AI_Code_2차수.zip'
+save_path = '/content/drive/MyDrive/AI_Code_Quiz1.zip'
 
 response = requests.get(url)
 with open(save_path, 'wb') as f:
